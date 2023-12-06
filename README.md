@@ -9,7 +9,7 @@ This JavaScript class provides methods for symmetric encryption and decryption u
 ```
 const originalData = "Hello, this is a secret message.";
 
-const encryptor = new SymmetricEncryption();
+const encryptor = new SymmetricEncryption('AES-CBC'); // Initialize with optional encryption algorithm (default: 'AES-CBC')
 
 // Create a secretKey from a password (optional). You can bring your own key too (must be a CryptoKey object).
 const secretKey = await encryptor.deriveKey("YourPassword"); // Replace with your actual password
