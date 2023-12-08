@@ -7,18 +7,25 @@ This JavaScript class provides methods for symmetric encryption and decryption u
 ## Sample Usage
 
 ```
-const originalData = "Hello, this is a secret message.";
+async function example() {
 
-const encryptor = new SymmetricEncryption('AES-CBC'); // Initialize with optional encryption algorithm (default: 'AES-CBC')
+    const originalData = "Hello, this is a secret message.";
 
-// Create a secretKey from a password (optional). You can bring your own key too (must be a CryptoKey object).
-const secretKey = await encryptor.deriveKey("YourPassword"); // Replace with your actual password
+    const encryptor = new SymmetricEncryption('AES-CBC'); // Initialize with optional encryption algorithm (default: 'AES-CBC')
 
-const encryptedData = await encryptor.encrypt(originalData, secretKey);
-console.log("Encrypted Data:", encryptedData);
+    // Create a secretKey from a password (optional). You can bring your own key too (must be a CryptoKey object).
+    const secretKey = await encryptor.deriveKey("YourPassword"); // Replace with your actual password
 
-const decryptedData = await encryptor.decrypt(encryptedData, secretKey);
-console.log("Decrypted Data:", decryptedData);
+    const encryptedData = await encryptor.encrypt(originalData, secretKey);
+    console.log("Encrypted Data:", encryptedData);
+
+    const decryptedData = await encryptor.decrypt(encryptedData, secretKey);
+    console.log("Decrypted Data:", decryptedData);
+
+}
+
+example();
+
 ```
 
 ## Note
