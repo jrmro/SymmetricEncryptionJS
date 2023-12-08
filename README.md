@@ -34,5 +34,8 @@ example();
 * The class uses the Web Crypto API [https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API)
 * Handle and store your secret key securely. Do not hardcode it in your project.
 
+## Author
+Joseph Romero
+
 ## License
 This code is released under the MIT License.
