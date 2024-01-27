@@ -13,7 +13,7 @@ async function example() {
 
     const encryptor = new SymmetricEncryption('AES-CBC'); // Initialize with optional encryption algorithm (default: 'AES-CBC')
 
-    // Create a secretKey from a password (optional). You can bring your own key too (must be a CryptoKey object).
+    // Create a secretKey from a password (optional). You can bring your own key too (must be a Base64-encoded string).
     const secretKey = await encryptor.deriveKey("YourPassword"); // Replace with your actual password
 
     const encryptedData = await encryptor.encrypt(originalData, secretKey);
